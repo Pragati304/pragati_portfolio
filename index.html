@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pragati Kote | AWS Cloud & DevOps Engineer</title>
+<meta name="description" content="Pragati Kote, fresher AWS Cloud & DevOps Engineer based in Pune and Hyderabad. Terraform, Docker, Kubernetes, Jenkins and AWS projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Colour system: 60% warm off-white (bg/surface), 30% ink navy (text), 10% teal accent (buttons, links, tags). */
+:root{
+  --bg:#FBFAF7; --surface:#FFFFFF; --ink:#1B2430; --muted:#5B6676;
+  --line:#E7E4DD; --accent:#0F766E; --accent-ink:#0B5A54; --accent-soft:#E6F3F1;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent-ink);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.2;letter-spacing:-.01em}
+
+/* nav */
+header{position:sticky;top:0;z-index:10;background:rgba(251,250,247,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:18px;color:var(--ink)}
+.links{display:flex;gap:22px;font-size:14px}
+.links a{color:var(--muted)}
+.links a:hover{color:var(--ink);text-decoration:none}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;padding:72px 0 64px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:500;color:var(--accent-ink);background:var(--accent-soft);padding:5px 12px;border-radius:99px;margin-bottom:18px}
+.hero h1{font-size:clamp(36px,5.5vw,56px);margin-bottom:10px}
+.role{font-size:20px;color:var(--accent-ink);font-weight:500;margin-bottom:18px}
+.pitch{color:var(--muted);max-width:520px;margin-bottom:24px}
+.where{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;color:var(--muted);margin-bottom:28px}
+.where span::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:8px;vertical-align:1px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;font-weight:500;font-size:15px;border:1px solid var(--line);background:var(--surface);color:var(--ink);transition:.15s}
+.btn:hover{border-color:var(--accent);text-decoration:none;transform:translateY(-1px)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-ink)}
+.photo{justify-self:end;width:100%;max-width:320px}
+.photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:22px;border:6px solid var(--surface);box-shadow:0 14px 40px rgba(27,36,48,.12)}
+
+/* sections */
+section{padding:64px 0;border-top:1px solid var(--line)}
+.kicker{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink);margin-bottom:8px}
+h2{font-size:clamp(26px,3.5vw,34px);margin-bottom:28px}
+.about p{max-width:720px;color:var(--muted);font-size:17px}
+.about p+p{margin-top:14px}
+.about strong{color:var(--ink);font-weight:600}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.card h3{font-size:17px;margin-bottom:12px}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{font-size:13px;padding:3px 10px;border-radius:99px;background:var(--accent-soft);color:var(--accent-ink)}
+
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.project{display:flex;flex-direction:column;transition:.15s}
+.project:hover{border-color:var(--accent);box-shadow:0 8px 24px rgba(27,36,48,.07)}
+.project h3{font-size:19px;margin-bottom:8px}
+.project p{color:var(--muted);font-size:15px;margin-bottom:12px}
+.project ul{list-style:none;margin:0 0 16px;display:grid;gap:7px}
+.project li{font-size:14.5px;color:var(--ink);padding-left:18px;position:relative}
+.project li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:2px;background:var(--accent)}
+.project .tags{margin-top:auto;margin-bottom:16px}
+.project .go{font-weight:500;font-size:14.5px}
+
+/* education */
+.two{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card .meta{font-size:14px;color:var(--muted);margin-bottom:8px}
+.card p{font-size:15px;color:var(--muted)}
+.note{margin-top:20px;font-size:14.5px;color:var(--muted)}
+
+/* contact */
+.contact{text-align:center}
+.contact p{color:var(--muted);max-width:520px;margin:0 auto 24px}
+.contact .btns{justify-content:center}
+footer{padding:28px 0 40px;text-align:center;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;gap:32px;padding:44px 0 48px}
+  .photo{order:-1;justify-self:start;max-width:200px}
+  .skills,.projects,.two{grid-template-columns:1fr}
+  .links{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.project{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#top">Pragati Kote</a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap">
+
+  <div class="hero">
+    <div>
+      <span class="eyebrow">Open to entry-level roles</span>
+      <h1>Pragati Kote</h1>
+      <p class="role">AWS Cloud &amp; DevOps Engineer</p>
+      <p class="pitch">I build secure, highly available cloud infrastructure with Terraform, ship it through CI/CD pipelines, and keep it observable with monitoring and alerts.</p>
+      <div class="where"><span>Pune</span><span>Hyderabad, India</span></div>
+      <div class="btns">
+        <a class="btn primary" href="Pragati_Kote_Resume.pdf" download>Download Resume</a>
+        <a class="btn" href="https://github.com/Pragati304" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/pragatikote" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="photo">
+      <img src="pragati.jpg" alt="Portrait of Pragati Kote" width="320" height="400">
+    </div>
+  </div>
+
+  <section id="about" class="about">
+    <p class="kicker">About</p>
+    <h2>Cloud infrastructure, automated end to end</h2>
+    <p>I'm a fresher with a <strong>BCA (2025)</strong> and hands-on training in AWS and DevOps. I enjoy turning infrastructure into code: designing VPCs, provisioning with <strong>Terraform</strong>, containerising apps with <strong>Docker</strong>, and deploying them with <strong>Jenkins</strong>, GitHub Actions and Kubernetes.</p>
+    <p>I'm looking for an <strong>entry-level AWS Cloud / DevOps Engineer</strong> role where I can apply automation and cloud skills in a production environment. I'm based in Pune and Hyderabad.</p>
+  </section>
+
+  <section id="skills">
+    <p class="kicker">Skills</p>
+    <h2>Tools I work with</h2>
+    <div class="skills">
+      <div class="card"><h3>AWS</h3><div class="tags">
+        <span class="tag">EC2</span><span class="tag">S3</span><span class="tag">EBS</span><span class="tag">VPC</span><span class="tag">IAM</span><span class="tag">ECS</span><span class="tag">ECR</span><span class="tag">EKS</span><span class="tag">RDS</span><span class="tag">SNS</span><span class="tag">Route 53</span><span class="tag">ALB</span><span class="tag">Transit Gateway</span><span class="tag">Auto Scaling</span><span class="tag">CloudFront</span><span class="tag">CloudWatch</span><span class="tag">CloudTrail</span></div></div>
+      <div class="card"><h3>Infrastructure as Code</h3><div class="tags">
+        <span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">AWS CLI</span><span class="tag">Python</span></div></div>
+      <div class="card"><h3>CI/CD</h3><div class="tags">
+        <span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">AWS CodeDeploy</span></div></div>
+      <div class="card"><h3>Containers</h3><div class="tags">
+        <span class="tag">Docker</span><span class="tag">Kubernetes</span></div></div>
+      <div class="card"><h3>Networking</h3><div class="tags">
+        <span class="tag">TCP/IP</span><span class="tag">DNS</span><span class="tag">Subnetting</span><span class="tag">Routing</span><span class="tag">VPC Design</span></div></div>
+      <div class="card"><h3>Monitoring &amp; Systems</h3><div class="tags">
+        <span class="tag">CloudWatch Alarms</span><span class="tag">CloudTrail</span><span class="tag">Linux</span><span class="tag">Bash</span><span class="tag">Git &amp; GitHub</span></div></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <p class="kicker">Projects</p>
+    <h2>Things I've built</h2>
+    <div class="projects">
+
+      <article class="card project">
+        <h3>Multi-Tier VPC Architecture</h3>
+        <p>A highly available AWS network built from scratch with Terraform.</p>
+        <ul>
+          <li>VPC with public and private subnets across 2 Availability Zones, Internet and NAT Gateways</li>
+          <li>Auto Scaling Group of EC2 instances behind an Application Load Balancer, scaling out at 60% CPU</li>
+          <li>Chained security groups so app servers accept traffic only from the load balancer</li>
+        </ul>
+        <div class="tags"><span class="tag">Terraform</span><span class="tag">VPC</span><span class="tag">ALB</span><span class="tag">Auto Scaling</span><span class="tag">EC2</span></div>
+        <a class="go" href="https://github.com/Pragati304/aws-vpc-terraform-architecture" target="_blank" rel="noopener">View on GitHub →</a>
+      </article>
+
+      <article class="card project">
+        <h3>AWS Monitoring &amp; Alerting</h3>
+        <p>Real-time alerts and audit logging for AWS, provisioned entirely as code.</p>
+        <ul>
+          <li>CloudWatch alarms for EC2 CPU, status checks and network traffic</li>
+          <li>SNS topic that sends alarm notifications to email</li>
+          <li>Multi-region CloudTrail logging to a locked-down, private S3 bucket</li>
+        </ul>
+        <div class="tags"><span class="tag">Terraform</span><span class="tag">CloudWatch</span><span class="tag">SNS</span><span class="tag">CloudTrail</span><span class="tag">S3</span></div>
+        <a class="go" href="https://github.com/Pragati304/aws-monitoring-alerting" target="_blank" rel="noopener">View on GitHub →</a>
+      </article>
+
+      <article class="card project">
+        <h3>BankMate: Docker &amp; Jenkins Pipeline</h3>
+        <p>A multi-container app deployed automatically on AWS EC2 on every build.</p>
+        <ul>
+          <li>Web app, API, MySQL and Nginx reverse proxy orchestrated with Docker Compose</li>
+          <li>MySQL data persisted on an EBS-backed volume</li>
+          <li>Jenkins pipeline: clone, build, deploy and verify</li>
+        </ul>
+        <div class="tags"><span class="tag">Docker</span><span class="tag">Docker Compose</span><span class="tag">Jenkins</span><span class="tag">Nginx</span><span class="tag">MySQL</span><span class="tag">EC2</span><span class="tag">EBS</span></div>
+        <a class="go" href="https://github.com/Pragati304/bankmate-" target="_blank" rel="noopener">View on GitHub →</a>
+      </article>
+
+      <article class="card project">
+        <h3>Node App: CI and Kubernetes</h3>
+        <p>A Node.js service packaged with Docker, tested in CI and deployed to Kubernetes.</p>
+        <ul>
+          <li>Dockerfile to containerise the app</li>
+          <li>GitHub Actions workflow that installs, checks and builds the image on every push</li>
+          <li>Kubernetes Deployment (2 replicas, readiness and liveness probes) and NodePort Service on Minikube</li>
+        </ul>
+        <div class="tags"><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">Kubernetes</span><span class="tag">Minikube</span><span class="tag">Node.js</span></div>
+        <a class="go" href="https://github.com/Pragati304/nodeapp-devops-task" target="_blank" rel="noopener">View on GitHub →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="education">
+    <p class="kicker">Education &amp; Training</p>
+    <h2>Where I learned</h2>
+    <div class="two">
+      <div class="card">
+        <h3>Bachelor of Computer Applications</h3>
+        <div class="meta">2025 · CGPA 8.29</div>
+        <p>College of Computer Science &amp; Information Technology, Latur (SRTM University, Nanded)</p>
+      </div>
+      <div class="card">
+        <h3>AWS &amp; DevOps Training</h3>
+        <div class="meta">Naresh Technologies, Hyderabad</div>
+        <p>AWS core services, Linux administration, networking, Docker, Kubernetes and CI/CD tools, all hands-on.</p>
+      </div>
+    </div>
+    <p class="note">Also practised on KodeKloud labs: EC2 security groups and key pairs, Python virtual environments.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <p class="kicker">Contact</p>
+    <h2>Let's talk</h2>
+    <p>I'm looking for an entry-level AWS Cloud / DevOps role in Pune or Hyderabad. The quickest way to reach me is email or LinkedIn.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:pkote20@gmail.com">pkote20@gmail.com</a>
+      <a class="btn" href="https://linkedin.com/in/pragatikote" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/Pragati304" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="Pragati_Kote_Resume.pdf" download>Resume (PDF)</a>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>© <span id="y">2026</span> Pragati Kote · Pune &amp; Hyderabad, India</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
