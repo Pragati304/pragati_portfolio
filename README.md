@@ -4,9 +4,7 @@ Personal portfolio website of **Pragati Kote**, a fresher AWS Cloud & DevOps Eng
 
 🌐 **Live site:** https://pragati304.github.io
 
-## About this site
-
-A single-page, responsive portfolio built with plain HTML and CSS (no frameworks, no build step). It covers:
+## About this site:
 
 - About me and the roles I'm looking for
 - Skills grouped by area: AWS, Infrastructure as Code, CI/CD, Containers, Networking, Monitoring
@@ -33,22 +31,6 @@ A single-page, responsive portfolio built with plain HTML and CSS (no frameworks
 └── README.md
 ```
 
-## Run locally
-
-Open `index.html` in any browser. No install needed.
-
-## Deploy on GitHub Pages
-
-1. Name the repository `Pragati304.github.io` and keep it public.
-2. Upload these files to the root of the repo.
-3. Go to **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/ (root)`, and save.
-4. The site goes live at https://pragati304.github.io within a couple of minutes.
-
-## Updating
-
-- **Photo:** replace `pragati.jpg` with a new file of the same name.
-- **Resume:** replace `Pragati_Kote_Resume.pdf` with a new file of the same name.
-- **Content or colors:** edit `index.html`. The colors are defined once at the top of the file under `:root`.
 
 ## Contact
 
