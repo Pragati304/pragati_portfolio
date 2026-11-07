@@ -1,6 +1,6 @@
 # Pragati Kote | Portfolio
 
-Personal portfolio website of **Pragati Kote**, a fresher AWS Cloud & DevOps Engineer based in Pune and Hyderabad, India.
+My Personal portfolio as a fresher AWS Cloud & DevOps Engineer based on location Pune and Hyderabad, India.
 
 🌐 **Live site:** https://pragati304.github.io
 
@@ -35,5 +35,5 @@ Personal portfolio website of **Pragati Kote**, a fresher AWS Cloud & DevOps Eng
 ## Contact
 
 - Email: pkote20@gmail.com
-- LinkedIn: [linkedin.com/in/pragatikote](https://linkedin.com/in/pragatikote)
-- GitHub: [github.com/Pragati304](https://github.com/Pragati304)
+- LinkedIn: linkedin.com/in/pragatikote(https://linkedin.com/in/pragatikote)
+- GitHub: github.com/Pragati304(https://github.com/Pragati304)
